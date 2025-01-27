@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Setup
+{% endblock %}
+
+{% block main %}
+    <form action="/setup" method="post">
+
+        <div class="describer">Add a Gym Day:</div>
+
+        <br>
+
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="day" name="day" placeholder="Gym Day Name" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add Gym Day</button>
+
+        <br><br><br><br><br>
+
+        <div class="describer">Add an Exercise:</div>
+
+        <br>
+
+        <select id="tday" name="tday">
+            <option selected disabled>Training Day</option>
+            {% for training in trainings %}
+                <option>{{ training.day }}</option>
+            {% endfor %}
+        </select>
+
+        <br><br>
+
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="ename" name="ename" placeholder="Exercise Name" type="text">
+        </div>
+
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="desc" name="desc" placeholder="Description (optional)" type="text">
+        </div>
+
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="sets" name="sets" placeholder="Sets" type="number">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="reps" name="reps" placeholder="Reps" type="number">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="weight" name="weight" placeholder="Weight (kg)" type="number">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Add Exercise</button>
+    </form>
+{% endblock %}

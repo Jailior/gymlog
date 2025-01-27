@@ -1,0 +1,105 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+    font-weight: bold;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+    font-weight: bold;
+}
+
+.nav-textt
+{
+    color: #ffffff;
+}
+
+.table
+{
+
+}
+
+
+.describer
+{
+    font-size: 24px;
+    color: #4287f5;
+    font-weight: bold;
+}
+
+.describer-b
+{
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.describer-b2
+{
+    font-size: 30px;
+    color: #4287f5;
+    font-weight: bold;
+}
+
+.describer-m
+{
+    font-size: 26px;
+    color: #4287f5;
+    font-weight: bold;
+}
+
+.describer-m2
+{
+    font-size: 26px;
+    color: #d14b4b;
+    font-weight: bold;
+}
+
+.describer-m3
+{
+    font-size: 26px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.describer-m4
+{
+    font-size: 26px;
+    color: #ebb434;
+    font-weight: bold;
+}
+
+.describer-s
+{
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.describer-s2
+{
+    font-size: 18px;
+    color: #4287f5;
+    font-weight: bold;
+}
+
+.describer-s3
+{
+    font-size: 18px;
+    color: #d14b4b;
+    font-weight: bold;
+}
+
+.describer-xs
+{
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: bold;
+}

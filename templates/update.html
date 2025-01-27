@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update and Log Progress
+{% endblock %}
+
+{% block main %}
+
+    <form action="/update" method="post">
+
+        <div class="table-responsive">
+            <table class="table table-dark allign-middle">
+
+                <thead>
+                    <tr class="describer-b">
+                        <th scope="col"> </th>
+                        <th scope="col">Exercise</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Sets</th>
+                        <th scope="col">Reps</th>
+                        <th scope="col">Weight</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                {% for training in trainings %}
+                    <tr>
+                        <th class="describer-b2" scope="row">{{ training.day }}</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                        {% for exercise in exercises %}
+
+                            <tr>
+
+                            {% if exercise.training_id == training.id -%}
+
+                                <td></td>
+                                <td class="describer-m2">{{ exercise.name }}</td>
+                                <td class="describer-allign-top" >{{ exercise.description }}</td>
+
+                                <td ><input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="{{ exercise.id }} sets" name="{{ exercise.id }} sets" placeholder="{{ exercise.sets }}" type="number"></td>
+                                <td ><input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="{{ exercise.id }} reps" name="{{ exercise.id }} reps" placeholder="{{ exercise.reps }}" type="number"></td>
+                                <td ><input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="{{ exercise.id }} weight" name="{{ exercise.id }} weight" placeholder="{{ exercise.weight }} kg" type="number"></td>
+                                <td><button class="btn btn-primary" type="submit">Update Exercise</button></td>
+
+                            {% endif %}
+
+                            </tr>
+                        {% endfor %}
+
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </form>
+{% endblock %}
